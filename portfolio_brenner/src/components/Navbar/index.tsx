@@ -2,7 +2,6 @@
 import { Flex, Link, HStack } from "@chakra-ui/react";
 import { SignInButton, SignOutButton, UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import NextLink from "next/link";
-import { useEffect, useState } from "react";
 
 interface NavbarProps {
     home: string;
