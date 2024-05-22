@@ -1,8 +1,11 @@
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import './globals.css';
 import { Providers } from './providers'
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
+import Home from './about/page';
+import About from './about/page';
+import Projects from './projects/page';
 
 export default function RootLayout({
   children,
@@ -12,15 +15,20 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
+        <body className='page-container'>
           <Providers>
             <header>
-              <Navbar home={'Home'} about={'About'} projects={'Projects'} skills={'Skills'} contact={'Contact'} />
+              <Navbar
+                home={'Home'}
+                about={'About'}
+                projects={'Projects'}
+                skills={'Skills'}
+                contact={'Contact'} />
             </header>
-            <main>
+            <main className='main-content'>
               {children}
             </main>
-            <footer>
+            <footer className='footer'>
               <Footer
                 instagram={'https://www.instagram.com/brenner_costa01/'}
                 linkedIn={'https://www.linkedin.com/in/brenner-costa-70994b197'}

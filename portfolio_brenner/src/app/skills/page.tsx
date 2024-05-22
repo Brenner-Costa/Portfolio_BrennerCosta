@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Skills() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
           <h1>Skills funcionando</h1>
     </main>
   );

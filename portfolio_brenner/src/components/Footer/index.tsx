@@ -17,8 +17,8 @@ interface FooterProps {
 }
 export function Footer({ instagram, linkedIn, phoneNumber, email, github }: FooterProps) {
     return (
-        <Flex bg="teal.500" color="white" py={4} alignItems="center" justifyContent="space-between" p={5} >
-            <VStack w="30%" bg="red">
+        <Flex bg="#1A4D2E" color="white" py={4} alignItems="center" justifyContent="space-between" p={5} >
+            <VStack w="30%" color="#E8DFCA">
                 <NextLink href="/">
                     <Link fontWeight="bold">Home</Link>
                 </NextLink>
@@ -35,16 +35,16 @@ export function Footer({ instagram, linkedIn, phoneNumber, email, github }: Foot
                     <Link>Contact</Link>
                 </NextLink>
             </VStack>
-            <Stack w="50%" bg="black" p={4}>
-                <HStack justify="space-around">
-                    <Link href={github} _hover={{ textDecoration: 'none', color: 'teal.300' }}>
-                        <FaGithub size={50} />
+            <Stack w="50%"  p={4}>
+                <HStack justify="space-around" >
+                    <Link href={github}  _hover={{ textDecoration: 'none', color: '' }}>
+                        <FaGithub size={50} color="E8DFCA" />
                     </Link>
                     <Link href={linkedIn} _hover={{ textDecoration: 'none', color: 'teal.300' }}>
-                        <FaLinkedin size={50} />
+                        <FaLinkedin size={50} color="E8DFCA" />
                     </Link>
                     <Link href={instagram} _hover={{ textDecoration: 'none', color: 'teal.300' }}>
-                        <FaInstagram size={50} />
+                        <FaInstagram size={50} color="E8DFCA" />
                     </Link>
                 </HStack>
             </Stack>
